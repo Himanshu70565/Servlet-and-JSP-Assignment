@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Servlet as Filter Question2</display-name>
+  <welcome-file-list>
+    <welcome-file>register.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+  <servlet>
+    <servlet-name>IpAddressValidator</servlet-name>
+    <servlet-class>com.demo.IpAddressValidator</servlet-class>
+  	<init-param>
+  		<param-name>invalidIpAddress</param-name>
+  		<param-value>127.0.0.2</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IpAddressValidator</servlet-name>
+    <url-pattern>/IpAddressValidator</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+</web-app>
